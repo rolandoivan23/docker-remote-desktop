@@ -1,7 +1,7 @@
 # Build xrdp pulseaudio modules in builder container
 # See https://github.com/neutrinolabs/pulseaudio-module-xrdp/wiki/README
-ARG TAG=latest
-FROM ubuntu:$TAG as builder
+ARG TAG=20.04
+FROM ubuntu:20.04 as builder
 
 RUN sed -i -E 's/^# deb-src /deb-src /g' /etc/apt/sources.list \
     && apt-get update \

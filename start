@@ -1,8 +1,3 @@
 #!/usr/bin/env bash
 
-docker run --detach \
-    --rm \
-    --hostname="$(hostname)" \
-    --publish="3389:3389/tcp" \
-    --name="remote-desktop" \
-    docker-remote-desktop:latest
+docker run --detach --hostname="$(hostname)" --publish="3390:3389/tcp" --name="remote-desktop-diff-port-90" docker-remote-desktop:latest
